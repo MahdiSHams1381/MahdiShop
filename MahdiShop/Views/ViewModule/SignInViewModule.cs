@@ -13,5 +13,6 @@ namespace MahdiShop.Views.ViewModule
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        public bool Remmberme { get; set; }
     }
 }
