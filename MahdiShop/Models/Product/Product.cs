@@ -11,10 +11,10 @@ namespace MahdiShop.Models.Product
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }
-        [Required]
-        public List<string> Category { get; set; }
         public string Description { get; set; }
-        [Required]
+        [Required] 
         public decimal Price { get; set; }
+
+        public Category category { get; set; }
     }
 }
