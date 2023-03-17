@@ -23,8 +23,9 @@ namespace MahdiShop.Controllers.LoginController
             {
                 if (user.Password == user.PasswordRip)
                 {
-                    _context.User.Add(new User() { UserName = user.UserName , Password = user.Password , UserPhone = user.UserPhone , UserEmail = user.UserEmail  });
-                   return Redirect("Home/Index");
+                    _context.User.Add(new User() { UserName = user.UserName , Password = user.Password , UserPhone = user.UserPhone , UserEmail = user.UserEmail , PasswordRip = user.PasswordRip });
+                    _context.SaveChanges();
+                    return Redirect("/");
                 }
                 ViewBag.error = "error : your password Rip is not valid";
                 return View();
