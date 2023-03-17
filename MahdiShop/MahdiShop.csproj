@@ -17,6 +17,8 @@
     <Compile Remove="Migrations\20230317154935_2.Designer.cs" />
     <Compile Remove="Migrations\20230317155050_3.cs" />
     <Compile Remove="Migrations\20230317155050_3.Designer.cs" />
+    <Compile Remove="Migrations\20230317155448_creat relation.cs" />
+    <Compile Remove="Migrations\20230317155448_creat relation.Designer.cs" />
     <Compile Remove="Migrations\20230317155628_2.cs" />
     <Compile Remove="Migrations\20230317155628_2.Designer.cs" />
   </ItemGroup>

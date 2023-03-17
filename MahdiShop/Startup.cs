@@ -1,4 +1,5 @@
 using MahdiShop.Data;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,13 @@ namespace MahdiShop
         {
             services.AddControllersWithViews();
             services.AddDbContext<Context>(Option => { Option.UseSqlServer("Data Source = DESKTOP-0QSKDOG ;Initial Catalog=Mahdi_Shope ;integrated security=true"); });
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(Option =>
+            {
+                Option.LoginPath = "/Signin/Index";
+                Option.LogoutPath = "/Login/Index";
+                Option.ExpireTimeSpan= TimeSpan.FromDays(10);
+            }
+            ) ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,7 +55,7 @@ namespace MahdiShop
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

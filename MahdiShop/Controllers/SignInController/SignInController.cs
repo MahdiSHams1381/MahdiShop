@@ -9,6 +9,7 @@ namespace MahdiShop.Controllers.SignInController
         {
             return View();
         }
+        [HttpPost]
         public IActionResult Index(SignInViewModule module)
         {
             return View();
