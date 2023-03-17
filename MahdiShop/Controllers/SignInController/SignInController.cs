@@ -44,11 +44,10 @@ namespace MahdiShop.Controllers.SignInController
                         IsPersistent = module.Remmberme
                     };
                     HttpContext.SignInAsync(principal, properties);
-                    var c = new CookieOptions();
-                    c.Expires = DateTime.Now.AddSeconds(100);
-                    Response.Cookies.Append("c", module.UserName, c);
-                    Console.WriteLine(Request.Cookies["c"]);
-                  //  Response.Cookies.Delete("c");
+                  //  var c = new CookieOptions();
+                  //  c.Expires = DateTime.Now.AddSeconds(100);
+                  //  Response.Cookies.Append("c", module.UserName, c);
+                  // Response.Cookies.Delete("c");
                     return Redirect("/");
 
                 }
