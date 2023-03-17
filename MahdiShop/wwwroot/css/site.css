@@ -69,16 +69,23 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
-#menue:hover {
-    width: 20%;
-    position: absolute;
-    opacity : 40% ;
-}
 #menue {
-    transition: all 1s ease;
-    background-color: #1e4356;
-    width: 5%;
+    width: 20%;
     height: 100%;
-    position: absolute;
-    right: 0;
+    position: fixed;
+    right: -113px;
+}
+#sin1 {
+    transform:
+        rotate(-90deg)
+        scale(5);
+
+}
+#menue:hover {
+    transition: all 1s ease;
+    right: 0px;
+}
+#menue:not(:hover) {
+    transition: all 1s ease;
+    right: -113px;
 }
