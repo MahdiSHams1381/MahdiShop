@@ -7,7 +7,7 @@ namespace MahdiShop.Controllers.LoginController
     public class LoginController : Controller
     {
         private Context _context;
-        LoginController(Context context)
+        public LoginController(Context context)
         {
             _context = context;
         }
@@ -24,13 +24,13 @@ namespace MahdiShop.Controllers.LoginController
                 if (user.Password == user.PasswordRip)
                 {
                     _context.User.Add(new User() { UserName = user.UserName , Password = user.Password , UserPhone = user.UserPhone , UserEmail = user.UserEmail  });
-                   return RedirectToAction("Home");
+                   return Redirect("Home/Index");
                 }
                 ViewBag.error = "error : your password Rip is not valid";
-                return View(user);
+                return View();
             }
             ViewBag.error = "error : your data is not valid";
-            return View(user);
+            return View();
         }
     }
 }

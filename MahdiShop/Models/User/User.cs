@@ -23,7 +23,7 @@ namespace MahdiShop.Models.User
         public string Password { get; set; }
         [Compare("Password" , ErrorMessage = "your password rip is nor compair") ]
         [RegularExpression(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,20}$", ErrorMessage = "کلمه عبور باید شامل حرف و عدد باشد")]
-
+        [DataType(DataType.Password)]
         public string PasswordRip { get; set; }
     }
 }

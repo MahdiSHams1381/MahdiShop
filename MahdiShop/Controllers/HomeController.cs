@@ -1,4 +1,5 @@
-﻿using MahdiShop.Models;
+﻿using MahdiShop.Data;
+using MahdiShop.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,10 +13,11 @@ namespace MahdiShop.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private Context _context;
+        public HomeController(ILogger<HomeController> logger , Context context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
