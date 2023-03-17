@@ -11,6 +11,14 @@
     <Compile Remove="Migrations\20230317110851_creat db.Designer.cs" />
     <Compile Remove="Migrations\20230317111009_creat db.cs" />
     <Compile Remove="Migrations\20230317111009_creat db.Designer.cs" />
+    <Compile Remove="Migrations\20230317154859_test.cs" />
+    <Compile Remove="Migrations\20230317154859_test.Designer.cs" />
+    <Compile Remove="Migrations\20230317154935_2.cs" />
+    <Compile Remove="Migrations\20230317154935_2.Designer.cs" />
+    <Compile Remove="Migrations\20230317155050_3.cs" />
+    <Compile Remove="Migrations\20230317155050_3.Designer.cs" />
+    <Compile Remove="Migrations\20230317155628_2.cs" />
+    <Compile Remove="Migrations\20230317155628_2.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

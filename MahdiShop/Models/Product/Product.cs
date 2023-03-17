@@ -5,8 +5,8 @@ namespace MahdiShop.Models.Product
 {
     public class Product
     {
-        [Required]
         [Key]
+        
         public int ProductId { get; set; }
         [Required]
         [MaxLength(50)]

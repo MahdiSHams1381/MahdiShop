@@ -5,7 +5,6 @@ namespace MahdiShop.Models.Product
 {
     public class Category
     {
-        [Required]
         [Key]
         public int CategoryId { get; set; }
         [Required]
