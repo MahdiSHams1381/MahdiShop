@@ -81,6 +81,9 @@ body {
         scale(5);
 
 }
+#sin2 {
+    transform: rotate(-90deg) scale(6);
+}
 #menue:hover {
     transition: all 1s ease;
     right: 0px;
