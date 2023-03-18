@@ -96,3 +96,16 @@ body {
     margin-left: 65%;
     position: absolute;
 }
+#vid {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -167px;
+    width: 147%;
+    height: 137%;
+    background-color: #00ffc40f;
+    opacity: 0.3;
+    z-index: 0;
+    border-radius: 0 0 50% 53%;
+    transform: translateX(-50%) translateY(18px) rotate(2deg);
+}
