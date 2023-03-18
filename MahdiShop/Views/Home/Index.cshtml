@@ -50,13 +50,13 @@
             <div class="logo">
                 @if (User.Identity.IsAuthenticated)
                 {
-                    <p class="text-light"><a href="index.html"><span>wellcom @User.Identity.Name to MahdiShop</span></a></p>
+                    <p class="text-light"><span>wellcom @User.Identity.Name to MahdiShop</span></p>
 
                 }
                 else
                 {
 
-                    <p class="text-light"><a href="signin"><span>Login</span></a></p>
+                    <p class="text-light"><a class="text-light" href="SignIn"><span class="text-light">Login</span></a></p>
                 }
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
