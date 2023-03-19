@@ -27,5 +27,8 @@
     }
     <p class="text-light"><a class="text-light" href="../ProductDisplay"><span class="text-light">Product</span></a></p>
     <br />
-    <a class="text-light" onclick="openModalBuy()">Pay</a>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <a class="text-light" onclick="openModalBuy()">Pay</a>
+    }
 </div>
