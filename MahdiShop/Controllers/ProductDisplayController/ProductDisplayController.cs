@@ -21,5 +21,12 @@ namespace MahdiShop.Controllers.ProductLauncher
             k.productss = p;
             return View(k);
         }
+        public IActionResult Filter(ProductFilterViewModel model)
+        {
+            List<Product> p = _context.Product.Where(c => c.Name == model.ProductName || c.Price< model.PriceTo && c.Price > model.PriceFrom).ToList();
+            ProductFilterViewModel k = new ProductFilterViewModel();
+            k.productss = p;
+            return View("index",k);
+        }
     }
 }
