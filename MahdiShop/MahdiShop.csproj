@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\NewFolder1\**" />
+    <Content Remove="Controllers\NewFolder1\**" />
+    <EmbeddedResource Remove="Controllers\NewFolder1\**" />
+    <None Remove="Controllers\NewFolder1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Migrations\20230317110742_creat db.cs" />
     <Compile Remove="Migrations\20230317110742_creat db.Designer.cs" />
     <Compile Remove="Migrations\20230317110851_creat db.cs" />
