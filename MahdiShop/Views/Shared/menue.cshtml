@@ -20,8 +20,12 @@
 <div id="naveitem1">
     <p class="text-light"><a class="text-light" href="/"><span class="text-light">Home</span></a></p>
     <br />
+    @if(!User.Identity.IsAuthenticated){
     <p class="text-light"><a class="text-light" href="login"><span class="text-light">Login</span></a></p>
     <p class="text-light"><a class="text-light" href="SignIn"><span class="text-light">signin</span></a></p>
     <br />
+    }
     <p class="text-light"><a class="text-light" href="../ProductDisplay"><span class="text-light">Product</span></a></p>
+    <br />
+    <a class="text-light" onclick="openModalBuy()">Pay</a>
 </div>
