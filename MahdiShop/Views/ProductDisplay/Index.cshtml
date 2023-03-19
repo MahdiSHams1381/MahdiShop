@@ -3,7 +3,7 @@
 <div class="row">
     <div class="cli-md-1"></div>
     <div class="col-md-11">
-        <form  asp-action="Filter">
+        <form asp-action="Filter">
             <div class="form-group">
                 <label asp-for="ProductName" class="control-label"></label>
                 <input asp-for="ProductName" class="form-control" />
@@ -32,13 +32,13 @@
         <div>
             @for (int w = 0; w < @Model.productss.Count; w++)
             {
-                <div style="background-color:aquamarine">
+                <div style="background-color:dodgerblue">
                     <h6>@Model.productss[w].Name </h6>
                     <p>@Model.productss[w].Description</p>
                     <p>@Model.productss[w].Price</p>
-                    <a href="../Buy/index/@Model.productss[w].ProductId" >buy</a>
-                    <p>-----------------------------------------------------------</p>
+                    <a  href="../Buy/index/@Model.productss[w].ProductId" style="color:brown">buy</a>
                 </div>
+                <br />
             }
         </div>
     </div>
