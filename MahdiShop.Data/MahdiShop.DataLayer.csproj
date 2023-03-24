@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A76363F0-3D3E-4662-A974-1910470C68F7}</ProjectGuid>
+    <ProjectGuid>{5B9A8DE0-CD7C-4CBC-AC92-C2C520989585}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MahdiShop.Domain</RootNamespace>
-    <AssemblyName>MahdiShop.Domain</AssemblyName>
+    <RootNamespace>MahdiShop.Data</RootNamespace>
+    <AssemblyName>MahdiShop.Data</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -42,21 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\ViewModule\ProductFilterViewModel.cs" />
-    <Compile Include="Views\ViewModule\SignInViewModule.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Views\Home\Index.cshtml" />
-    <None Include="Views\Home\Privacy.cshtml" />
-    <None Include="Views\Login\Index.cshtml" />
-    <None Include="Views\ProductDisplay\Index.cshtml" />
-    <None Include="Views\Shared\Error.cshtml" />
-    <None Include="Views\Shared\menue.cshtml" />
-    <None Include="Views\Shared\_Layout.cshtml" />
-    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
-    <None Include="Views\SignIn\Index.cshtml" />
-    <None Include="Views\_ViewImports.cshtml" />
-    <None Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
