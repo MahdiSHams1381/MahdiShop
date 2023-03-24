@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace MahdiShop.Models.Product
+namespace MahdiShop.DataLayer.Models.Product
 {
     public class Category
     {
@@ -11,7 +11,6 @@ namespace MahdiShop.Models.Product
         [MaxLength(50)]
         public string Name { get; set; }
         public string Discription { get; set; }
-
         public ICollection<Product> product { get; set; }
     }
 }

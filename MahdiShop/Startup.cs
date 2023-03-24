@@ -1,4 +1,4 @@
-using MahdiShop.Data;
+using MahdiShop.DataLayer.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

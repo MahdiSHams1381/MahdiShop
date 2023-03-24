@@ -5,11 +5,11 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MahdiShop", "MahdiShop\MahdiShop.csproj", "{BFFD9038-2018-4951-8B2A-B9826E749389}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MahdiShop.Data", "MahdiShop.Data\MahdiShop.Data.csproj", "{5B9A8DE0-CD7C-4CBC-AC92-C2C520989585}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "MahdiShop.Data\DataLayer.csproj", "{5B9A8DE0-CD7C-4CBC-AC92-C2C520989585}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MahdiShop.Core", "MahdiShop.Core\MahdiShop.Core.csproj", "{1CA5E24E-7A4C-4F03-BBBB-03E3CEAC58E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "MahdiShop.Core\Core.csproj", "{1CA5E24E-7A4C-4F03-BBBB-03E3CEAC58E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MahdiShop.Domain", "MahdiShop.Domain\MahdiShop.Domain.csproj", "{A76363F0-3D3E-4662-A974-1910470C68F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "MahdiShop.Domain\Domain.csproj", "{A76363F0-3D3E-4662-A974-1910470C68F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,5 +1,4 @@
-﻿using MahdiShop.Data;
-using MahdiShop.Models.User;
+﻿using MahdiShop.DataLayer.Data;
 using MahdiShop.Views.ViewModule;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;

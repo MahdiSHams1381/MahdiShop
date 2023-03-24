@@ -1,5 +1,5 @@
-﻿using MahdiShop.Data;
-using MahdiShop.Models;
+﻿using MahdiShop.DataLayer.Data;
+using MahdiShop.DataLayer.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;

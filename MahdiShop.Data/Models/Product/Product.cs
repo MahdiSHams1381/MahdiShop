@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace MahdiShop.Models.Product
+namespace MahdiShop.DataLayer.Models.Product
 {
     public class Product
     {

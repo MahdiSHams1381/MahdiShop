@@ -1,9 +1,8 @@
-﻿using MahdiShop.Models.Product;
-using MahdiShop.Models.User;
+﻿using MahdiShop.DataLayer.Models.Product;
+using MahdiShop.DataLayer.Models.User;
 using Microsoft.EntityFrameworkCore;
 using System.Xml.Serialization;
-
-namespace MahdiShop.Data
+namespace MahdiShop.DataLayer.Data
 {
     public class Context : DbContext
     {

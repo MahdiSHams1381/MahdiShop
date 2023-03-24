@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MahdiShop.Models.User
+namespace MahdiShop.DataLayer.Models.User
 {
     public class User
     {

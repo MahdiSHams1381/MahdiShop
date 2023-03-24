@@ -1,6 +1,6 @@
 using System;
 
-namespace MahdiShop.Models
+namespace MahdiShop.DataLayer.Models
 {
     public class ErrorViewModel
     {

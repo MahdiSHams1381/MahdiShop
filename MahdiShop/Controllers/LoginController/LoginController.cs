@@ -1,5 +1,5 @@
-﻿using MahdiShop.Data;
-using MahdiShop.Models.User;
+﻿using MahdiShop.DataLayer.Data;
+using MahdiShop.DataLayer.Models.User;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MahdiShop.Controllers.LoginController

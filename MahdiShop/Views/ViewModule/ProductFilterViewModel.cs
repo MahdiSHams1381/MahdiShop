@@ -1,4 +1,4 @@
-﻿using MahdiShop.Models.Product;
+﻿using MahdiShop.DataLayer.Models.Product;
 using System.Collections.Generic;
 
 namespace MahdiShop.Views.ViewModule

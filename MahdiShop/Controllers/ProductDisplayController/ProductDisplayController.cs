@@ -1,5 +1,5 @@
-﻿using MahdiShop.Data;
-using MahdiShop.Models.Product;
+﻿using MahdiShop.DataLayer.Data;
+using MahdiShop.DataLayer.Models.Product;
 using MahdiShop.Views.ViewModule;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
