@@ -41,12 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoginController\LoginController.cs" />
-    <Compile Include="Controllers\ProductDisplayController\BuyController.cs" />
-    <Compile Include="Controllers\ProductDisplayController\ProductDisplayController.cs" />
-    <Compile Include="Controllers\SignInController\SignInController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Service\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
