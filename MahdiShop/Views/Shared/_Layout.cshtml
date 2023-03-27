@@ -65,7 +65,7 @@
                 @RenderBody()
             </main>
        
-            <div id="menue">
+            44<div id="menue">
                 <partial name="menue"></partial>
             </div>
         </div>
@@ -85,6 +85,7 @@
 <script>
     function openModalBuy(){
         console.log("ssssssss");
+        var text = "" ;
         var tag = document.createElement("p");
         for (var q = 0; q < document.cookie.split(';').length; q++) {
             var w = document.cookie.split(';') ;
@@ -93,6 +94,7 @@
         tag.appendChild(text);
           var tag2 = document.createElement("br");
             tag.appendChild(tag2)
+            text += r[1]
         }
         document.getElementById("modal-backdrop").appendChild(tag);
         document.getElementById("modal-backdrop").style.opacity = 100;  
