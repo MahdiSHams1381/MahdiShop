@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MahdiShop.Data.Models.Interface
 {
-    internal interface IUserRipo
+    public interface IUserRepo
     {
         bool AddUserToDb(User user);
         bool RemoveUserFromDb(int id);

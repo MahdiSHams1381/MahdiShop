@@ -1,3 +1,5 @@
+using MahdiShop.Core.UnitOfWork;
+using MahdiShop.Data.Models.Interface;
 using MahdiShop.DataLayer.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
@@ -28,7 +30,11 @@ namespace MahdiShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<Context>(Option => { Option.UseSqlServer("Data Source = DESKTOP-0QSKDOG ;Initial Catalog=Mahdi_Shope ;integrated security=true"); });
+            
+            services.AddTransient<Context, Context>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+            services.AddDbContext<Context>(Option => { Option.UseSqlServer("Data Source = AMIN-LAPTOP\\SQLEXPRESS ;Initial Catalog=Mahdi_Shope ;integrated security=true"); });
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(Option =>
             {
                 Option.LoginPath = "/Signin/Index";
