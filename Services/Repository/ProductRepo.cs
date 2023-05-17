@@ -2,7 +2,6 @@
 using MahdiShop.DataLayer.Data;
 using MahdiShop.DataLayer.Models.Product;
 using MahdiShop.DataLayer.Models.User;
-using MahdiShop.DataLayer.Polymorphis;
 using System;
 using System.Collections.Generic;
 
@@ -13,7 +12,7 @@ namespace MahdiShop.Data.Ripocitory
         private Context _context;
         public ProductRepo(Context context) { _context = context; }
 
-        public bool AddProductToDb(IProduct Product)
+        public bool AddProductToDb(Product Product)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +37,7 @@ namespace MahdiShop.Data.Ripocitory
             throw new NotImplementedException();
         }
 
-        public bool UpDateProductinDb(IProduct Product)
+        public bool UpDateProductinDb(Product Product)
         {
             throw new NotImplementedException();
         }

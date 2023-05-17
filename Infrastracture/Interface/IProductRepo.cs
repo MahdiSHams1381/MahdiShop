@@ -7,9 +7,9 @@ namespace MahdiShop.Data.Models.Interface
 {
     public interface IProductRepo
     {
-        bool AddProductToDb(IProduct Product);
+        bool AddProductToDb(Product Product);
         bool RemoveProductFromDb(int id);
-        bool UpDateProductinDb(IProduct Product);
+        bool UpDateProductinDb(Product Product);
         User searchProductByUserId(int id);
         List<Product> FilterTheProduct(String FilterItem);
         Product GetById(int id);
