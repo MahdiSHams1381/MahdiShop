@@ -162,11 +162,15 @@
     <Compile Include="DataApi\ProductApi.cs" />
     <Compile Include="Data\Context.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />
+    <Compile Include="Models\Interface\IProductRipo.cs" />
+    <Compile Include="Models\Interface\IUserRipo.cs" />
     <Compile Include="Models\Product\Category.cs" />
     <Compile Include="Models\Product\Product.cs" />
     <Compile Include="Models\User\User.cs" />
     <Compile Include="Polymorphis\IProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ripocitory\ProductRipo.cs" />
+    <Compile Include="Ripocitory\UserRipo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
