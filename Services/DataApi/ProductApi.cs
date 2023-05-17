@@ -1,10 +1,9 @@
 ﻿using MahdiShop.DataLayer.Data;
 using MahdiShop.DataLayer.Models.Product;
-using MahdiShop.DataLayer.Polymorphis;
 
 namespace MahdiShop.DataLayer.DataApi
 {
-    public class ProductApi : IProduct
+    public class ProductApi : Product
     {
         private Context _context;
         public ProductApi(Context context)
