@@ -1,54 +1,85 @@
 ﻿@model MahdiShop.DataLayer.Models.User.User
 
 @{
+
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<!-- Section: Design Block -->
+<section class="text-center">
+    <!-- Background image -->
+    <div class="p-5 bg-image" style="
+        background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+        height: 300px;
+        "></div>
+    <!-- Background image -->
 
-<h4>User</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+        margin-top: -100px;
+        background: hsla(0, 0%, 100%, 0.8);
+        backdrop-filter: blur(30px);
+        ">
+        <div class="card-body py-5 px-md-5">
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-5">Sign up now</h2>
         <form asp-action="Index">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="UserName" class="control-label"></label>
-                <input asp-for="UserName" class="form-control"  />
-                <span asp-validation-for="UserName" class="text-danger"></span>
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label asp-for="UserName" class="control-label"></label>
+                                    <input asp-for="UserName" class="form-control" />
+                                    <span asp-validation-for="UserName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label asp-for="UserPhone" class="control-label"></label>
+                                    <input asp-for="UserPhone" class="form-control" />
+                                    <span asp-validation-for="UserPhone" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <div class="form-group">
+                                <label asp-for="UserEmail" class="control-label"></label>
+                                <input asp-for="UserEmail" class="form-control" />
+                                <span asp-validation-for="UserEmail" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <div class="form-group">
+                                <label asp-for="Password" class="control-label"></label>
+                                <input asp-for="Password" class="form-control" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-outline mb-4">
+
+                            <div class="form-group">
+                            <label asp-for="PasswordRip" class="control-label">password ripate</label>
+                            <input asp-for="PasswordRip" class="form-control" />
+                            <span asp-validation-for="PasswordRip" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-4">
+                            Sign up
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="UserPhone" class="control-label"></label>
-                <input asp-for="UserPhone" class="form-control" />
-                <span asp-validation-for="UserPhone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UserEmail" class="control-label"></label>
-                <input asp-for="UserEmail" class="form-control" />
-                <span asp-validation-for="UserEmail" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PasswordRip" class="control-label">password ripate</label>
-                <input asp-for="PasswordRip" class="form-control"  />
-                <span asp-validation-for="PasswordRip" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
-</div>
-<div>
-    <label>@ViewBag.error</label>
-</div>
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+</section>
+<!-- Section: Design Block -->
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
