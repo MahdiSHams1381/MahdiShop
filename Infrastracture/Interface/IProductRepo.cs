@@ -10,7 +10,6 @@ namespace MahdiShop.Data.Models.Interface
         bool AddProductToDb(Product Product);
         bool RemoveProductFromDb(int id);
         bool UpDateProductinDb(Product Product);
-        User searchProductByUserId(int id);
         List<Product> FilterTheProduct(String FilterItem);
         Product GetById(int id);
     }

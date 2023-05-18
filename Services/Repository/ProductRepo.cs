@@ -14,7 +14,16 @@ namespace MahdiShop.Data.Ripocitory
 
         public bool AddProductToDb(Product Product)
         {
-            throw new NotImplementedException();
+            try{
+                _context.Product.Add(Product);
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
         }
 
         public List<Product> FilterTheProduct(string FilterItem)
@@ -24,17 +33,21 @@ namespace MahdiShop.Data.Ripocitory
 
         public Product GetById(int id)
         {
-            throw new NotImplementedException();
+           return  _context.Product.Find(id);
         }
 
         public bool RemoveProductFromDb(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public User searchProductByUserId(int id)
-        {
-            throw new NotImplementedException();
+            try
+            {
+                _context.Product.Remove(GetById(id));
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public bool UpDateProductinDb(Product Product)
