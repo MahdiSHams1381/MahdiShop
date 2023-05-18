@@ -35,7 +35,7 @@ namespace MahdiShop.Controllers.ProductController
                 {
                     product.Profile.CopyTo(stream);
                 }
-                profileName = "/assets/img/Profile/" + newAvatarURL;
+                profileName = "/css/Profile/" + newAvatarURL;
             }
             Product p = new Product() { Name = product.Name,Price = product.Price, Description = product.Description, category = product.category, Profile = profileName, ProductId = product.ProductId };
             p.ProductId = 10;
