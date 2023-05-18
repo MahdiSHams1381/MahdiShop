@@ -1,7 +1,11 @@
 ﻿using MahdiShop.Data.Ripocitory;
 using MahdiShop.DataLayer.Data;
+using MahdiShop.Views.ViewModule;
+using MahdiShop.DataLayer.Data;
 using MahdiShop.DataLayer.Models.Product;
 using Microsoft.AspNetCore.Mvc;
+using System.IO;
+using System;
 
 namespace MahdiShop.Controllers.ProductController
 {
@@ -16,10 +20,26 @@ namespace MahdiShop.Controllers.ProductController
         {
             return View();
         }
-        public void GetAddProduct(Product product)
+        public void GetAddProduct( AddProductViewModel product)
         {
-            product.ProductId = 15;
-            new ProductRepo(_context).AddProductToDb(product);
+            string profileName;
+            if (product.Profile == null)
+            {
+                profileName = "/css/download (1).jpg";
+            }
+            else
+            {
+                string newAvatarURL = Guid.NewGuid().ToString() + Path.GetExtension(product.Profile.FileName);
+                string newPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "css", newAvatarURL);
+                using (var stream = new FileStream(newPath, FileMode.Create))
+                {
+                    product.Profile.CopyTo(stream);
+                }
+                profileName = "/assets/img/Profile/" + newAvatarURL;
+            }
+            Product p = new Product() { Name = product.Name,Price = product.Price, Description = product.Description, category = product.category, Profile = profileName, ProductId = product.ProductId };
+            p.ProductId = 10;
+            new ProductRepo(_context).AddProductToDb(p);
         }
         public IActionResult AddProduct()
         {

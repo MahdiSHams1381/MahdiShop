@@ -14,6 +14,7 @@ namespace MahdiShop.DataLayer.Models.Product
         public string Description { get; set; }
         [Required] 
         public decimal Price { get; set; }
+        public string Profile { get; set; }
 
         public Category category { get; set; }
     }
