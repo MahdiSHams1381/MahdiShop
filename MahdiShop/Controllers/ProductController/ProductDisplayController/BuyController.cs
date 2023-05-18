@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 
-namespace MahdiShop.Controllers.ProductDisplayController
+namespace MahdiShop.Controllers.ProductController.ProductDisplayController
 {
     public class BuyController : Controller
     {
@@ -10,7 +10,7 @@ namespace MahdiShop.Controllers.ProductDisplayController
         {
             var c = new CookieOptions();
             c.Expires = DateTime.Now.AddSeconds(100);
-            Response.Cookies.Append("product"+id, Convert.ToString(id), c);
+            Response.Cookies.Append("product" + id, Convert.ToString(id), c);
             return Redirect("../../ProductDisplay");
         }
     }

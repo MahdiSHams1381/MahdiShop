@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Http;
 using System;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-namespace MahdiShop.Controllers.SignInController
+namespace MahdiShop.Controllers.Register.SignInController
 {
     public class SignInController : Controller
     {
@@ -26,30 +26,30 @@ namespace MahdiShop.Controllers.SignInController
         [HttpPost]
         public IActionResult Index(SignInViewModule module)
         {
-                if (_context.User.Where(u => u.UserName == module.UserName && u.UserEmail == module.UserEmail && u.Password == module.Password).ToList().Count() > 0)
-                {
-                    var claims = new List<Claim>
+            if (_context.User.Where(u => u.UserName == module.UserName && u.UserEmail == module.UserEmail && u.Password == module.Password).ToList().Count() > 0)
+            {
+                var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Email, module.UserEmail) ,
                         new Claim(ClaimTypes.Name, module.UserName) ,
                         new Claim("password", module.Password)
                     };
-                    var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
-                    var principal = new ClaimsPrincipal(identity);
+                var principal = new ClaimsPrincipal(identity);
 
-                    var properties = new AuthenticationProperties
-                    {
-                        IsPersistent = module.Remmberme
-                    };
-                    HttpContext.SignInAsync(principal, properties);
-                  //  var c = new CookieOptions();
-                  //  c.Expires = DateTime.Now.AddSeconds(100);
-                  //  Response.Cookies.Append("c", module.UserName, c);
-                  // Response.Cookies.Delete("c");
-                    return Redirect("/");
+                var properties = new AuthenticationProperties
+                {
+                    IsPersistent = module.Remmberme
+                };
+                HttpContext.SignInAsync(principal, properties);
+                //  var c = new CookieOptions();
+                //  c.Expires = DateTime.Now.AddSeconds(100);
+                //  Response.Cookies.Append("c", module.UserName, c);
+                // Response.Cookies.Delete("c");
+                return Redirect("/");
 
-                }
+            }
             ViewBag.error2 = "cant finde the user with this information";
             return View();
         }

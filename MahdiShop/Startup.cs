@@ -34,7 +34,7 @@ namespace MahdiShop
             services.AddTransient<Context, Context>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
 
-            services.AddDbContext<Context>(Option => { Option.UseSqlServer("Data Source = AMIN-LAPTOP\\SQLEXPRESS ;Initial Catalog=Mahdi_Shope ;integrated security=true"); });
+            services.AddDbContext<Context>(Option => { Option.UseSqlServer("Data Source =DESKTOP-0QSKDOG;Initial Catalog=Mahdi_Shope ;integrated security=true"); });
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(Option =>
             {
                 Option.LoginPath = "/Signin/Index";

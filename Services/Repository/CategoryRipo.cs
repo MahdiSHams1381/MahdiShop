@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services.Repository
+namespace MahdiShop.Data.Ripocitory
 {
-    internal class CategoryRipo : ICategoryRipo
+    public class CategoryRipo : ICategoryRipo
     {
         private Context _context;
         public CategoryRipo(Context context) { _context = context; }

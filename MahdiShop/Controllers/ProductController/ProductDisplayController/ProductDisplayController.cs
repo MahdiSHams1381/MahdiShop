@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MahdiShop.Controllers.ProductLauncher
+namespace MahdiShop.Controllers.ProductController.ProductDisplayController
 {
     public class ProductDisplayController : Controller
     {
@@ -23,10 +23,10 @@ namespace MahdiShop.Controllers.ProductLauncher
         }
         public IActionResult Filter(ProductFilterViewModel model)
         {
-            List<Product> p = _context.Product.Where(c => c.Name == model.ProductName || c.Price< model.PriceTo && c.Price > model.PriceFrom).ToList();
+            List<Product> p = _context.Product.Where(c => c.Name == model.ProductName || c.Price < model.PriceTo && c.Price > model.PriceFrom).ToList();
             ProductFilterViewModel k = new ProductFilterViewModel();
             k.productss = p;
-            return View("index",k);
+            return View("index", k);
         }
     }
 }

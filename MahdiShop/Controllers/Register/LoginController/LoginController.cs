@@ -2,7 +2,7 @@
 using MahdiShop.DataLayer.Models.User;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MahdiShop.Controllers.LoginController
+namespace MahdiShop.Controllers.Register.LoginController
 {
     public class LoginController : Controller
     {
@@ -23,7 +23,7 @@ namespace MahdiShop.Controllers.LoginController
             {
                 if (user.Password == user.PasswordRip)
                 {
-                    _context.User.Add(new User() { UserName = user.UserName , Password = user.Password , UserPhone = user.UserPhone , UserEmail = user.UserEmail , PasswordRip = user.PasswordRip });
+                    _context.User.Add(new User() { UserName = user.UserName, Password = user.Password, UserPhone = user.UserPhone, UserEmail = user.UserEmail, PasswordRip = user.PasswordRip });
                     _context.SaveChanges();
                     return Redirect("/");
                 }
