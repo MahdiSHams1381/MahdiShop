@@ -178,6 +178,10 @@
     <Compile Include="Migrations\20230317203151_add password rip to db.Designer.cs">
       <DependentUpon>20230317203151_add password rip to db.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20230519101129_add seed data.cs" />
+    <Compile Include="Migrations\20230519101129_add seed data.designer.cs">
+      <DependentUpon>20230519101129_add seed data.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
