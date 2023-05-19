@@ -1,45 +1,117 @@
 ﻿@using MahdiShop.Views.ViewModule
 @model ProductFilterViewModel
-<div class="row">
-    <div class="cli-md-1"></div>
-    <div class="col-md-11">
-        <form asp-action="Filter">
-            <div class="form-group">
-                <label asp-for="ProductName" class="control-label"></label>
-                <input asp-for="ProductName" class="form-control" />
-                <span asp-validation-for="ProductName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PriceFrom" class="control-label"></label>
-                <input asp-for="PriceFrom" class="form-control" />
-                <span asp-validation-for="PriceFrom" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PriceTo" class="control-label"></label>
-                <input asp-for="PriceTo" class="form-control" />
-                <span asp-validation-for="PriceTo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CategoryName" class="control-label"></label>
-                <input asp-for="CategoryName" class="form-control" />
-                <span asp-validation-for="CategoryName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
 
-        <div>
-            @for (int w = 0; w < @Model.productss.Count; w++)
-            {
-                <div style="background-color:dodgerblue">
-                    <h6>@Model.productss[w].Name </h6>
-                    <p>@Model.productss[w].Description</p>
-                    <p>@Model.productss[w].Price</p>
-                    <a  href="../Buy/index/@Model.productss[w].ProductId" style="color:brown">buy</a>
+
+
+
+<section class="vh-100" style=" background-image: url(https://localhost:53428/css/55f21061-6ed3-4890-9eea-0b666a711af9.jpg);">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 text-black">
+
+                <div class="px-5 ms-xl-4">
+                    <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+                    <span class="h1 fw-bold mb-0"></span>
                 </div>
                 <br />
-            }
+                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+                    <form asp-action="Filter" style="width: 23rem;">
+
+                        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Filter</h3>
+
+                        <div class="form-group">
+                            <label asp-for="ProductName" class="control-label" style="color:white"></label>
+                            <input asp-for="ProductName" class="form-control" />
+                            <span asp-validation-for="ProductName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="PriceFrom" class="control-label" style="color:white"></label>
+                            <input asp-for="PriceFrom" class="form-control" />
+                            <span asp-validation-for="PriceFrom" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PriceTo" class="control-label" style="color:white"></label>
+                            <input asp-for="PriceTo" class="form-control" />
+                            <span asp-validation-for="PriceTo" class="text-danger"></span>
+                        </div>  <div class="form-group">
+                            <label asp-for="category" class="control-label">Choos category</label>
+                            @{
+                                <select name="category">
+                                    @for (int i = 0; i < Model.category.Count; i++)
+                                    {
+
+                                        <option value="@Model.category[i].Name">@Model.category[i].Name</option>
+
+                                    }
+                                </select>
+                            }
+                        </div>
+                        <div class="pt-1 mb-4">
+                            <button class="btn btn-info btn-lg btn-block" type="submit">see</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+          
         </div>
+    </div>
+</section>
+
+
+
+
+<h1 class="h1 text-center" id="pageHeaderTitle">the best for you</h1>
+
+@{
+    @for (int w = 0; w < @Model.productss.Count; w+=2)
+    {
+        <section>
+            <div class="container py-2">
+                <article class="postcard dark blue col-md-12">
+                    <a class="col-md-5" href="#">
+                        <img class="col-md-12" src="@Model.productss[w].Profile" alt="Image Title" style="max-width: 90%;min-width: 60%;" />
+                    </a>
+                    <div class="col-md-7">
+                        <h1 class="postcard__title blue"><a href="#">@Model.productss[w].Name</a></h1>
+                        <div class="postcard__bar"></div>
+                        <div class="postcard__preview-txt">@Model.productss[w].Description <br /><br />@Model.productss[w].Price</div>
+                        <br />
+                        <ul class="postcard__tagbox">
+                            <li class="tag__item play blue">
+                                <a href="../Buy/index/@Model.productss[w].ProductId"><i class="fas fa-play mr-2"></i>Buy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <div class="container py-2">
+            <article class="postcard light blue col-md-12">
+                <a class="col-md-5" href="#">
+                    <img class="col-md-12" src="@Model.productss[w+1].Profile" alt="Image Title" style="max-width: 90%;min-width: 60%;" />
+                </a>
+                <div class="col-md-5">
+                    <h1 class="postcard__title blue"><a href="#">@Model.productss[w+1].Name</a></h1>
+
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt" style="color:black">@Model.productss[w+1].Description <br /><br />@Model.productss[w+1].Price</div>
+                    <br />
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item play blue">
+                            <a href="../Buy/index/@Model.productss[w+1].ProductId"><i class="fas fa-play mr-2"></i>Buy</a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    }
+}
     </div>
 </div>

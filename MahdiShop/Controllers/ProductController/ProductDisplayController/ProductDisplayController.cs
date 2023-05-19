@@ -19,6 +19,8 @@ namespace MahdiShop.Controllers.ProductController.ProductDisplayController
             List<Product> p = _context.Product.Select(c => c).ToList();
             ProductFilterViewModel k = new ProductFilterViewModel();
             k.productss = p;
+            k.category = _context.Category.Select(n => n).ToList();
+
             return View(k);
         }
         public IActionResult Filter(ProductFilterViewModel model)
