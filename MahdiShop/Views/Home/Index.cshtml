@@ -183,7 +183,7 @@
                         <div class="card-body">
                             <h5 class="card-title">@Model[i].Name</h5>
                             <p class="card-text">@Model[i].Description</p>
-                              <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model.productss[i].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
+                            <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model[i].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
                         </div>
                     </div>
                     @if (i+1 >= Model.Count) { break; }
@@ -194,7 +194,7 @@
                                 <small class="text-muted">
                                     Someone famous in <cite title="Source Title">@Model[i+1].Name</cite>
                                 </small>
-                                  <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model.productss[i+1].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
+                                  <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model[i+1].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
                             </footer>
                         </blockquote>
                     </div>
@@ -205,7 +205,7 @@
                             <h5 class="card-title">@Model[i+2].Name</h5>
                             <p class="card-text">@Model[i+2].Description</p>
                         </div>
-                        <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model.productss[i+2].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
+                        <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model[i+2].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
 
                     </div>
                     @if (i+3 >= Model.Count) { break; }
@@ -217,7 +217,7 @@
                                     Someone famous in <cite title="Source Title">@Model[i+3].Name</cite>
                                 </small>
                             </footer>
-                            <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model.productss[i+3].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
+                            <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model[i+3].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
 
                         </blockquote>
                     </div>
@@ -227,7 +227,8 @@
                             <h5 class="card-title">@Model[i+4].Name</h5>
                             <p class="card-text">@Model[i+4].Description</p>
                         </div>
-                        <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model.productss[i+4].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
+                        <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model
+[i+4].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
 
                     </div>
                     @if (i+5 >= Model.Count) { break; }
@@ -235,7 +236,7 @@
                     {
                         <div class="card">
                             <img class="card-img" src="@Model[i+5].Profile" alt="Card image">
-                              <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model.productss[i+5].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
+                              <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model[i+5].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
                               
                         </div>
                     }
@@ -248,7 +249,7 @@
                                     Someone famous in <cite title="Source Title">@Model[i+6].Name</cite>
                                 </small>
                             </footer>
-                            <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model.productss[i+6].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
+                            <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model[i+6].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
 
                         </blockquote>
                     </div>
@@ -259,7 +260,7 @@
 
                             <div class="card">
                                 <img class="card-img" src="@Model[i+7].Profile" alt="Card image">
-                                <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model.productss[i+7].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
+                                <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model[i+7].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
 
                             </div>
                         }
@@ -267,7 +268,7 @@
                             <h5 class="card-title">@Model[i+7].Name</h5>
                             <p class="card-text">@Model[i+7].Description</p>
                         </div>
-                        <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model.productss[i+7].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
+                        <a asp-controller="ProductDisplay" asp-action="ShowProduuct" asp-route-id="@Model[i+7].ProductId"><i class="fas fa-play mr-2"></i>Info</a>
 
                     </div>
                 }
