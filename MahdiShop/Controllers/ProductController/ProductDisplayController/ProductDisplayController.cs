@@ -1,4 +1,5 @@
-﻿using MahdiShop.DataLayer.Data;
+﻿using MahdiShop.Data.Ripocitory;
+using MahdiShop.DataLayer.Data;
 using MahdiShop.DataLayer.Models.Product;
 using MahdiShop.Views.ViewModule;
 using Microsoft.AspNetCore.Mvc;
@@ -29,6 +30,11 @@ namespace MahdiShop.Controllers.ProductController.ProductDisplayController
             ProductFilterViewModel k = new ProductFilterViewModel();
             k.productss = p;
             return View("index", k);
+        }
+
+        public IActionResult ShowProduuct(int id)
+        {
+            return View(new ProductRepo(_context).GetById(id));
         }
     }
 }
