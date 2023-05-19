@@ -10,7 +10,7 @@ namespace MahdiShop.DataLayer.Models.Product
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }
-        public string Discription { get; set; }
+        public string Description { get; set; }
         public ICollection<Product> product { get; set; }
     }
 }

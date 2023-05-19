@@ -1,5 +1,6 @@
 ﻿using MahdiShop.DataLayer.Data;
 using MahdiShop.DataLayer.Models;
+using MahdiShop.DataLayer.Models.Product;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -22,7 +23,14 @@ namespace MahdiShop.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<Product> product = _context.Product.Select(n => n).ToList();
+            //String q = "";
+            //foreach(Product w in product)
+            //{
+            //    q += " , new Product() {"+$"category={w.category}  , Description="{w.Description}" , Name="{w.Name}" , Price={w.Price} , Profile="{w.Profile}""+"}";
+
+            //}
+            return View(product);
         }
 
         public IActionResult Privacy()

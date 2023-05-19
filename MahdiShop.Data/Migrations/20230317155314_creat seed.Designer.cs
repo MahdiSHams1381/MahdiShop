@@ -28,7 +28,7 @@ namespace MahdiShop.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Discription")
+                    b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -44,19 +44,19 @@ namespace MahdiShop.Migrations
                         new
                         {
                             CategoryId = 1,
-                            Discription = "All of the thing that can eat",
+                            Description = "All of the thing that can eat",
                             Name = "food"
                         },
                         new
                         {
                             CategoryId = 2,
-                            Discription = "All of the thing that Use in home",
+                            Description = "All of the thing that Use in home",
                             Name = "HomeTools"
                         },
                         new
                         {
                             CategoryId = 3,
-                            Discription = "All of the thing that work with electronic",
+                            Description = "All of the thing that work with electronic",
                             Name = "Eletrition tools"
                         });
                 });

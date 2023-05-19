@@ -8,7 +8,7 @@ namespace MahdiShop.Migrations
         {
             migrationBuilder.InsertData(
                 table: "Category",
-                columns: new[] { "CategoryId", "Discription", "Name" },
+                columns: new[] { "CategoryId", "Description", "Name" },
                 values: new object[,]
                 {
                     { 1, "All of the thing that can eat", "food" },

@@ -35,10 +35,9 @@ namespace MahdiShop.Controllers.ProductController
                 {
                     product.Profile.CopyTo(stream);
                 }
-                profileName = "/css/Profile/" + newAvatarURL;
+                profileName = "/css/" + newAvatarURL;
             }
-            Product p = new Product() { Name = product.Name,Price = product.Price, Description = product.Description, category = product.category, Profile = profileName, ProductId = product.ProductId };
-            p.ProductId = 10;
+            Product p =  new Product() { Name = product.Name,Price = product.Price, Description = product.Description, category = product.category, Profile = profileName, ProductId = product.ProductId };
             new ProductRepo(_context).AddProductToDb(p);
         }
         public IActionResult AddProduct()

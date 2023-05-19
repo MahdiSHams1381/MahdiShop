@@ -42,13 +42,6 @@
                     </div>
                     <div class="form-outline mb-3">
                         <div class="form-group">
-                            <label asp-for="Description" class="control-label"></label>
-                            <input asp-for="Description" class="form-control" />
-                            <span asp-validation-for="Description" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="form-outline mb-3">
-                        <div class="form-group">
                             <label asp-for="Profile" class="control-label">Profile Image</label>
                             <input type="file" class="form-control" asp-for="Profile" placeholder="Profile ...." />
                             <span asp-validation-for="Profile" class="badge badge-danger"></span>
@@ -59,7 +52,7 @@
                     
         
                     <div class="text-center text-lg-start mt-4 pt-2">
-                        <button type="button" class="btn btn-primary btn-lg"
+                        <button type="submit" class="btn btn-primary btn-lg"
                                 style="padding-left: 2.5rem; padding-right: 2.5rem;">
                             Add
                         </button>
