@@ -16,8 +16,9 @@ namespace MahdiShop.Data.Ripocitory
         public CategoryRipo(Context context) { _context = context; }
         public bool AddCategory(Category category)
         {
+            
             try {
-                _context.Category.Add(category);
+                _context.Category.Add(new Category() { Description=category.Description , Name=category.Name});
                 _context.SaveChanges();
                 return true;
 

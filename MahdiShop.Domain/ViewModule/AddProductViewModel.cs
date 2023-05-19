@@ -17,7 +17,8 @@ namespace MahdiShop.Views.ViewModule
         public string Description { get; set; }
         public decimal Price { get; set; }
         public IFormFile Profile { get; set; }
+        public string category { get; set; }
+        public List<Category> categorySet { get; set; }
 
-        public Category category { get; set; }
     }
 }

@@ -6,6 +6,8 @@ using MahdiShop.DataLayer.Models.Product;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
 using System;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace MahdiShop.Controllers.ProductController
 {
@@ -18,6 +20,7 @@ namespace MahdiShop.Controllers.ProductController
         }
         public IActionResult Index()
         {
+        
             return View();
         }
         public void GetAddProduct( AddProductViewModel product)
@@ -37,12 +40,15 @@ namespace MahdiShop.Controllers.ProductController
                 }
                 profileName = "/css/" + newAvatarURL;
             }
-            Product p =  new Product() { Name = product.Name,Price = product.Price, Description = product.Description, category = product.category, Profile = profileName, ProductId = product.ProductId };
+            Product p =  new Product() { Name = product.Name,Price = product.Price, Description = product.Description, category =new CategoryRipo(_context).SearchCategoryById(product.ProductId), Profile = profileName, ProductId = product.ProductId };
             new ProductRepo(_context).AddProductToDb(p);
         }
         public IActionResult AddProduct()
         {
-            return View();
+            AddProductViewModel addProductViewModel = new AddProductViewModel();
+             addProductViewModel.categorySet =  _context.Category.Select(n => n).ToList();
+
+            return View(addProductViewModel);
         }
     }
 }

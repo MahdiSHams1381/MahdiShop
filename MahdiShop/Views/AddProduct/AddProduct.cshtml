@@ -1,4 +1,5 @@
-﻿@model MahdiShop.DataLayer.Models.Product.Product
+﻿@using MahdiShop.DataLayer.Models.Product;
+@model MahdiShop.Views.ViewModule.AddProductViewModel
 
 @{
     ViewData["Title"] = "AddProduct";
@@ -49,8 +50,26 @@
 
                     </div>
 
+                    <div class="form-outline mb-3">
+                        <div class="form-group">
+                            <label asp-for="category" class="control-label">Choos category</label>
+                        @{
+                               <select name="category">
+                            @for (int i = 0; i < Model.categorySet.Count; i++)
+                            {
+                         
+                                <option value="@Model.categorySet[i].CategoryId">@Model.categorySet[i].Name</option>
+                             
+                            }
+                                </select>
+                            }
+                        </div>
+
+                    </div>
+
                     
-        
+
+
                     <div class="text-center text-lg-start mt-4 pt-2">
                         <button type="submit" class="btn btn-primary btn-lg"
                                 style="padding-left: 2.5rem; padding-right: 2.5rem;">
