@@ -182,6 +182,18 @@
     <Compile Include="Migrations\20230519101129_add seed data.designer.cs">
       <DependentUpon>20230519101129_add seed data.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20230519175949_add see number to product.cs" />
+    <Compile Include="Migrations\20230519175949_add see number to product.designer.cs">
+      <DependentUpon>20230519175949_add see number to product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230519180110_add see number .cs" />
+    <Compile Include="Migrations\20230519180110_add see number .designer.cs">
+      <DependentUpon>20230519180110_add see number .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230519180524_add see number  seed data 0.cs" />
+    <Compile Include="Migrations\20230519180524_add see number  seed data 0.designer.cs">
+      <DependentUpon>20230519180524_add see number  seed data 0.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

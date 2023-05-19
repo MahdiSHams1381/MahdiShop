@@ -23,7 +23,7 @@ namespace MahdiShop.Controllers
 
         public IActionResult Index()
         {
-            List<Product> product = _context.Product.Select(n => n).ToList();
+            List<Product> product = _context.Product.Select(n => n).OrderByDescending(n => n.SeeNumber).ToList();
             //String q = "";
             //foreach(Product w in product)
             //{

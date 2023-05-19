@@ -31,22 +31,22 @@ namespace MahdiShop.DataLayer.Data
 
             #region seed data Product to test
             modelBuilder.Entity<Product>().HasData(
-             new Product() { ProductId= 1, Description="the best" , Name="tv" , Price=14000000 , Profile="/css/55f21061-6ed3-4890-9eea-0b666a711af9.jpg"} , 
-             new Product() { ProductId = 2, Description ="the best food in iran" , Name="sandwich" , Price=15000 , Profile="/css/d77a4624-8f71-47eb-b94b-bb517e2f3db7.jpg"} , 
-             new Product() { ProductId = 3, Description ="blue and black" , Name="mobl" , Price=5000000 , Profile="/css/7fd072b6-3bd1-453c-90e2-07e29fe3b12a.jpg"} ,
-             new Product() { ProductId = 4, Description ="best wood" , Name="chair" , Price=3200000 , Profile="/css/6d78ebf4-ee68-46e4-b68e-8be4c978044a.jpg"} , 
-             new Product() { ProductId = 5, Description ="green and red" , Name="saled" , Price=60000 , Profile="/css/9ffe609d-10c2-4232-9cca-8a0afbe42601.jpg"} ,
-             new Product() { ProductId = 6, Description ="asdajlasxa" , Name="shar" , Price=1456 , Profile="/css/55f21061-6ed3-4890-9eea-0b666a711af9.jpg"} , 
-             new Product() { ProductId = 7, Description ="Monaseb Baray hameh senin" , Name="SabziJat" , Price=14000 , Profile="/css/49493ef7-b16c-427f-8ea8-aee2a67ff461.jpg"} , 
-             new Product() { ProductId = 8, Description ="Baray jahizieh" , Name="Home app" , Price=280000000 , Profile="/css/9ffe609d-10c2-4232-9cca-8a0afbe42601.jpg"} , 
-             new Product() { ProductId = 9, Description ="besyarKhoob" , Name="YakhChal" , Price=30000000 , Profile="/css/d77a4624-8f71-47eb-b94b-bb517e2f3db7.jpg"} , 
-             new Product() { ProductId = 10, Description ="dar ranghay motafavet" , Name="Goshi" , Price=5000000 , Profile="/css/e0ce94cb-4ee1-46a4-8001-e1acc8aa315b.jpg"} , 
-             new Product() { ProductId = 11, Description ="hameh chiz ra khord ly konad" , Name="hamzan" , Price=4800000 , Profile="/css/7fd072b6-3bd1-453c-90e2-07e29fe3b12a.jpg"} , 
-             new Product() { ProductId = 12, Description ="besyar dag my koonad" , Name="snaksaz" , Price=2500000 , Profile="/css/8db76f47-db5c-4828-85ac-9ab24ab1ab3c.jpg"} ,
-             new Product() { ProductId = 13, Description ="khoshPokht" , Name="Nan" , Price=3700 , Profile="/css/6d78ebf4-ee68-46e4-b68e-8be4c978044a.jpg"} , 
-             new Product() { ProductId = 14, Description ="a book that  you can read" , Name="book" , Price=145900 , Profile="/css/8012f3fb-645c-4ca4-acdf-a612e3ff7d8b.jpg"} , 
-             new Product() { ProductId = 15, Description ="have blue and yellow" , Name="bag" , Price=25000000 , Profile="/css/40e2420a-7d60-437d-83b9-4fdf7a07455d.jpg"}
-                );
+             new Product() { SeeNumber = 0, ProductId = 1, Description = "the best", Name = "tv", Price = 14000000, Profile = "/css/55f21061-6ed3-4890-9eea-0b666a711af9.jpg" },
+             new Product() { SeeNumber = 0, ProductId = 2, Description = "the best food in iran", Name = "sandwich", Price = 15000, Profile = "/css/d77a4624-8f71-47eb-b94b-bb517e2f3db7.jpg" },
+             new Product() { SeeNumber = 0, ProductId = 3, Description = "blue and black", Name = "mobl", Price = 5000000, Profile = "/css/7fd072b6-3bd1-453c-90e2-07e29fe3b12a.jpg" },
+             new Product() { SeeNumber = 0, ProductId = 4, Description = "best wood", Name = "chair", Price = 3200000, Profile = "/css/6d78ebf4-ee68-46e4-b68e-8be4c978044a.jpg" },
+             new Product() { SeeNumber = 0, ProductId = 5, Description = "green and red", Name = "saled", Price = 60000, Profile = "/css/9ffe609d-10c2-4232-9cca-8a0afbe42601.jpg" },
+             new Product() { SeeNumber = 0, ProductId = 6, Description = "asdajlasxa", Name = "shar", Price = 1456, Profile = "/css/55f21061-6ed3-4890-9eea-0b666a711af9.jpg" },
+             new Product() { SeeNumber = 0, ProductId = 7, Description = "Monaseb Baray hameh senin", Name = "SabziJat", Price = 14000, Profile = "/css/49493ef7-b16c-427f-8ea8-aee2a67ff461.jpg" },
+             new Product() { SeeNumber = 0, ProductId = 8, Description = "Baray jahizieh", Name = "Home app", Price = 280000000, Profile = "/css/9ffe609d-10c2-4232-9cca-8a0afbe42601.jpg" },
+             new Product() { SeeNumber = 0, ProductId = 9, Description = "besyarKhoob", Name = "YakhChal", Price = 30000000, Profile = "/css/d77a4624-8f71-47eb-b94b-bb517e2f3db7.jpg" },
+             new Product() { SeeNumber = 0, ProductId = 10, Description = "dar ranghay motafavet", Name = "Goshi", Price = 5000000, Profile = "/css/e0ce94cb-4ee1-46a4-8001-e1acc8aa315b.jpg" },
+             new Product() { SeeNumber = 0, ProductId = 11, Description = "hameh chiz ra khord ly konad", Name = "hamzan", Price = 4800000, Profile = "/css/7fd072b6-3bd1-453c-90e2-07e29fe3b12a.jpg" },
+             new Product() { SeeNumber = 0, ProductId = 12, Description = "besyar dag my koonad", Name = "snaksaz", Price = 2500000, Profile = "/css/8db76f47-db5c-4828-85ac-9ab24ab1ab3c.jpg" },
+             new Product() { SeeNumber = 0, ProductId = 13, Description = "khoshPokht", Name = "Nan", Price = 3700, Profile = "/css/6d78ebf4-ee68-46e4-b68e-8be4c978044a.jpg" },
+             new Product() { SeeNumber = 0, ProductId = 14, Description = "a book that  you can read", Name = "book", Price = 145900, Profile = "/css/8012f3fb-645c-4ca4-acdf-a612e3ff7d8b.jpg" },
+             new Product() { SeeNumber = 0, ProductId = 15, Description = "have blue and yellow", Name = "bag", Price = 25000000, Profile = "/css/40e2420a-7d60-437d-83b9-4fdf7a07455d.jpg" }
+                ); ;
             #endregion
 
             base.OnModelCreating(modelBuilder);

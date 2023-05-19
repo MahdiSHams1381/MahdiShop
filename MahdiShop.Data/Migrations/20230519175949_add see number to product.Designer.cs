@@ -4,14 +4,16 @@ using MahdiShop.DataLayer.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MahdiShop.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230519175949_add see number to product")]
+    partial class addseenumbertoproduct
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -83,9 +85,6 @@ namespace MahdiShop.Migrations
                     b.Property<string>("Profile")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SeeNumber")
-                        .HasColumnType("int");
-
                     b.HasKey("ProductId");
 
                     b.HasIndex("CategoryId");
@@ -99,8 +98,7 @@ namespace MahdiShop.Migrations
                             Description = "the best",
                             Name = "tv",
                             Price = 14000000m,
-                            Profile = "/css/55f21061-6ed3-4890-9eea-0b666a711af9.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/55f21061-6ed3-4890-9eea-0b666a711af9.jpg"
                         },
                         new
                         {
@@ -108,8 +106,7 @@ namespace MahdiShop.Migrations
                             Description = "the best food in iran",
                             Name = "sandwich",
                             Price = 15000m,
-                            Profile = "/css/d77a4624-8f71-47eb-b94b-bb517e2f3db7.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/d77a4624-8f71-47eb-b94b-bb517e2f3db7.jpg"
                         },
                         new
                         {
@@ -117,8 +114,7 @@ namespace MahdiShop.Migrations
                             Description = "blue and black",
                             Name = "mobl",
                             Price = 5000000m,
-                            Profile = "/css/7fd072b6-3bd1-453c-90e2-07e29fe3b12a.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/7fd072b6-3bd1-453c-90e2-07e29fe3b12a.jpg"
                         },
                         new
                         {
@@ -126,8 +122,7 @@ namespace MahdiShop.Migrations
                             Description = "best wood",
                             Name = "chair",
                             Price = 3200000m,
-                            Profile = "/css/6d78ebf4-ee68-46e4-b68e-8be4c978044a.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/6d78ebf4-ee68-46e4-b68e-8be4c978044a.jpg"
                         },
                         new
                         {
@@ -135,8 +130,7 @@ namespace MahdiShop.Migrations
                             Description = "green and red",
                             Name = "saled",
                             Price = 60000m,
-                            Profile = "/css/9ffe609d-10c2-4232-9cca-8a0afbe42601.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/9ffe609d-10c2-4232-9cca-8a0afbe42601.jpg"
                         },
                         new
                         {
@@ -144,8 +138,7 @@ namespace MahdiShop.Migrations
                             Description = "asdajlasxa",
                             Name = "shar",
                             Price = 1456m,
-                            Profile = "/css/55f21061-6ed3-4890-9eea-0b666a711af9.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/55f21061-6ed3-4890-9eea-0b666a711af9.jpg"
                         },
                         new
                         {
@@ -153,8 +146,7 @@ namespace MahdiShop.Migrations
                             Description = "Monaseb Baray hameh senin",
                             Name = "SabziJat",
                             Price = 14000m,
-                            Profile = "/css/49493ef7-b16c-427f-8ea8-aee2a67ff461.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/49493ef7-b16c-427f-8ea8-aee2a67ff461.jpg"
                         },
                         new
                         {
@@ -162,8 +154,7 @@ namespace MahdiShop.Migrations
                             Description = "Baray jahizieh",
                             Name = "Home app",
                             Price = 280000000m,
-                            Profile = "/css/9ffe609d-10c2-4232-9cca-8a0afbe42601.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/9ffe609d-10c2-4232-9cca-8a0afbe42601.jpg"
                         },
                         new
                         {
@@ -171,8 +162,7 @@ namespace MahdiShop.Migrations
                             Description = "besyarKhoob",
                             Name = "YakhChal",
                             Price = 30000000m,
-                            Profile = "/css/d77a4624-8f71-47eb-b94b-bb517e2f3db7.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/d77a4624-8f71-47eb-b94b-bb517e2f3db7.jpg"
                         },
                         new
                         {
@@ -180,8 +170,7 @@ namespace MahdiShop.Migrations
                             Description = "dar ranghay motafavet",
                             Name = "Goshi",
                             Price = 5000000m,
-                            Profile = "/css/e0ce94cb-4ee1-46a4-8001-e1acc8aa315b.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/e0ce94cb-4ee1-46a4-8001-e1acc8aa315b.jpg"
                         },
                         new
                         {
@@ -189,8 +178,7 @@ namespace MahdiShop.Migrations
                             Description = "hameh chiz ra khord ly konad",
                             Name = "hamzan",
                             Price = 4800000m,
-                            Profile = "/css/7fd072b6-3bd1-453c-90e2-07e29fe3b12a.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/7fd072b6-3bd1-453c-90e2-07e29fe3b12a.jpg"
                         },
                         new
                         {
@@ -198,8 +186,7 @@ namespace MahdiShop.Migrations
                             Description = "besyar dag my koonad",
                             Name = "snaksaz",
                             Price = 2500000m,
-                            Profile = "/css/8db76f47-db5c-4828-85ac-9ab24ab1ab3c.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/8db76f47-db5c-4828-85ac-9ab24ab1ab3c.jpg"
                         },
                         new
                         {
@@ -207,8 +194,7 @@ namespace MahdiShop.Migrations
                             Description = "khoshPokht",
                             Name = "Nan",
                             Price = 3700m,
-                            Profile = "/css/6d78ebf4-ee68-46e4-b68e-8be4c978044a.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/6d78ebf4-ee68-46e4-b68e-8be4c978044a.jpg"
                         },
                         new
                         {
@@ -216,8 +202,7 @@ namespace MahdiShop.Migrations
                             Description = "a book that  you can read",
                             Name = "book",
                             Price = 145900m,
-                            Profile = "/css/8012f3fb-645c-4ca4-acdf-a612e3ff7d8b.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/8012f3fb-645c-4ca4-acdf-a612e3ff7d8b.jpg"
                         },
                         new
                         {
@@ -225,8 +210,7 @@ namespace MahdiShop.Migrations
                             Description = "have blue and yellow",
                             Name = "bag",
                             Price = 25000000m,
-                            Profile = "/css/40e2420a-7d60-437d-83b9-4fdf7a07455d.jpg",
-                            SeeNumber = 0
+                            Profile = "/css/40e2420a-7d60-437d-83b9-4fdf7a07455d.jpg"
                         });
                 });
 

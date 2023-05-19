@@ -34,7 +34,11 @@ namespace MahdiShop.Controllers.ProductController.ProductDisplayController
 
         public IActionResult ShowProduuct(int id)
         {
-            return View(new ProductRepo(_context).GetById(id));
+            Product p = new ProductRepo(_context).GetById(id);
+            p.SeeNumber++;
+            _context.Product.Update(p);
+            _context.SaveChanges();
+            return View(p);
         }
     }
 }

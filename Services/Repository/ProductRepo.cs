@@ -14,6 +14,7 @@ namespace MahdiShop.Data.Ripocitory
 
         public bool AddProductToDb(Product Product)
         {
+            Product.SeeNumber = 0;
             try{
                 _context.Product.Add(Product);
                 _context.SaveChanges();
